@@ -19,6 +19,8 @@ c.JupyterHub.cleanup_servers = False
 # Use a high port so users can try this on machines with a JupyterHub already present
 c.JupyterHub.hub_port = 15001
 c.Spawner.default_url = "/lab"
+c.JupyterHub.admin_users = set(["hammedb", "bhammed"])
+
 c.TraefikTomlProxy.should_start = False
 
 dynamic_conf_file_path = os.path.join(INSTALL_PREFIX, "state", "rules", "rules.toml")
